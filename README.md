@@ -1,0 +1,4 @@
+jxais
+=====
+
+Archlinux Installation Script
