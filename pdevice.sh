@@ -7,7 +7,7 @@
 device=$1
 
 gpttbl="mktable gpt"                          # create an empty GPT partition table on /dev/sda
-p1="mkpart linux 17.4KB 2MB"                  # create a 2MB linux partition #1 {1st 17.4KB (34 x 512 =17408 sectors) used by parted for its data}
+p1="mkpart linux 0% 2MB"                      # create a 2MB linux partition #1 {1st 17.4KB (34 x 512 =17408 kB) used by parted for its data}
 p1set="set 1 bios_grub on"                    # set partition #1 with the GRUB2 (core.img) stage2 bootcode (ef02)
 p2="mkpart linux ext2 2MB 500MB"              # create a linux partition #2
 p2set="set 2 boot on"                         # set partition #2 with the boot flag (ef00)
